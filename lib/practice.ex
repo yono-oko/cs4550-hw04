@@ -22,4 +22,10 @@ defmodule Practice do
   end
 
   # TODO: Add a palindrome? function.
+
+  # code for this function inspired by Nat's lecture.
+  def palindrome?(str) do
+    rstr = to_string(Enum.reverse(String.to_charlist(str)))
+    rstr == str
+  end
 end
