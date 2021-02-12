@@ -21,7 +21,7 @@ defmodule Practice do
     [1,2,x]
   end
 
-  # TODO: Add a palindrome? function.
+  # TODO: DONE. Add a palindrome? function.
 
   # code for this function inspired by Nat's lecture.
   def palindrome?(str) do

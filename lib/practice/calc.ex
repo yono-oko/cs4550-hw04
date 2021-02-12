@@ -7,24 +7,23 @@ defmodule Practice.Calc do
   def eval(chars) do
     # x = first item in list + recurse with rest of list
     x = parse_float(hd(chars))
+    # arg error from tl of mt list here
     evalHandler(x, tl(chars))
   end
 
   def evalHandler(firstNum, loChars) do
     cond do
       hd(loChars) == "+" ->
-        "plus"
+        firstNum + eval(tl(loChars))
       hd(loChars) == "-" ->
         "minus"
       hd(loChars) == "*" ->
         "multi"
       hd(loChars) == "/" ->
         "division"
+      hd(loChars) == "end" ->
+        firstNum
     end
-  end
-
-  def eval([]) do
-
   end
 
   def calc(expr) do
