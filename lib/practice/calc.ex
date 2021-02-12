@@ -22,7 +22,9 @@ defmodule Practice.Calc do
         newArr = tl(tl(loChars))
         evalHandler(tempNum, newArr)
       hd(loChars) == "/" ->
-        firstNum / eval(tl(loChars))
+        tempNum = (firstNum / parse_float(hd(tl(loChars))))
+        newArr = tl(tl(loChars))
+        evalHandler(tempNum, newArr)
       hd(loChars) == "end" ->
         firstNum
     end
