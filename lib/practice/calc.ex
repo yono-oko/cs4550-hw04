@@ -18,7 +18,9 @@ defmodule Practice.Calc do
       hd(loChars) == "-" ->
         firstNum - eval(tl(loChars))
       hd(loChars) == "*" ->
-        firstNum * eval(tl(loChars))
+        tempNum = (firstNum * parse_float(hd(tl(loChars))))
+        newArr = tl(tl(loChars))
+        evalHandler(tempNum, newArr)
       hd(loChars) == "/" ->
         firstNum / eval(tl(loChars))
       hd(loChars) == "end" ->
@@ -29,6 +31,7 @@ defmodule Practice.Calc do
   def calc(expr) do
     # This should handle +,-,*,/ with order of operations,
     # but doesn't need to handle parens.
-    eval(String.split(expr, ~r/\s+/) ++ ["end"])
+    arr = String.split(expr, ~r/\s+/) ++ ["end"]
+    eval(arr)
   end
 end
