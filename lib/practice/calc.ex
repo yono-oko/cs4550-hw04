@@ -16,11 +16,11 @@ defmodule Practice.Calc do
       hd(loChars) == "+" ->
         firstNum + eval(tl(loChars))
       hd(loChars) == "-" ->
-        "minus"
+        firstNum - eval(tl(loChars))
       hd(loChars) == "*" ->
-        "multi"
+        firstNum * eval(tl(loChars))
       hd(loChars) == "/" ->
-        "division"
+        firstNum / eval(tl(loChars))
       hd(loChars) == "end" ->
         firstNum
     end
@@ -29,24 +29,6 @@ defmodule Practice.Calc do
   def calc(expr) do
     # This should handle +,-,*,/ with order of operations,
     # but doesn't need to handle parens.
-    # expr
-    # |> String.split(~r/\s+/)
-    # |> hd
-    # |> parse_float
-    # |> :math.sqrt()
-
-    # Hint:
-    # expr
-    # |> split
-    # |> tag_tokens  (e.g. [+, 1] => [{:op, "+"}, {:num, 1.0}]
-    # |> convert to postfix
-    # |> reverse to prefix
-    # |> evaluate as a stack calculator using pattern matching
-
-    expr
-    |> String.split(~r/\s+/)
-    #|> postfix
-    #|> prefix
-    #|> eval
+    eval(String.split(expr, ~r/\s+/) ++ ["end"])
   end
 end

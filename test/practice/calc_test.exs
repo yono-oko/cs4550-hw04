@@ -8,8 +8,8 @@ defmodule Practice.CalcTest do
 
   test "additional: eval some arrays" do
     assert eval(["5", "+", "1", "end"]) == 6
-    assert eval(["5", "-", "1"]) == "minus"
-    assert eval(["1", "*", "1"]) == "multi"
-    assert eval(["1", "/", "1"]) == "division"
+    assert eval(["5", "-", "1", "end"]) == 4
+    assert eval(["2", "*", "10", "end"]) == 20
+    assert eval(["10", "/", "2", "end"]) == 5
   end
 end
