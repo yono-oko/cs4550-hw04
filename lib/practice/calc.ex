@@ -4,8 +4,27 @@ defmodule Practice.Calc do
     num
   end
 
-  def tag_tokens(text) do
-    
+  def eval(chars) do
+    # x = first item in list + recurse with rest of list
+    x = parse_float(hd(chars))
+    evalHandler(x, tl(chars))
+  end
+
+  def evalHandler(firstNum, loChars) do
+    cond do
+      hd(loChars) == "+" ->
+        "plus"
+      hd(loChars) == "-" ->
+        "minus"
+      hd(loChars) == "*" ->
+        "multi"
+      hd(loChars) == "/" ->
+        "division"
+    end
+  end
+
+  def eval([]) do
+
   end
 
   def calc(expr) do
@@ -27,7 +46,6 @@ defmodule Practice.Calc do
 
     expr
     |> String.split(~r/\s+/)
-    #|> tag_tokens
     #|> postfix
     #|> prefix
     #|> eval
