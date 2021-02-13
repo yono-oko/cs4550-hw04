@@ -31,7 +31,7 @@
     <h2>Palindrome?</h2>
 
     <%= form_for @conn, "/palindrome", fn f -> %>
-      <p>Enter word: <%= text_input f, :expr %></p>
+      <p>Enter word: <%= text_input f, :str %></p>
       <p><%= submit "Check Palindrome" %></p>
     <% end %>
   </div>
