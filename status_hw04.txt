@@ -1,0 +1,38 @@
+Please fill in answers to the questions below:
+
+
+1. What's your name?
+James Griffin
+
+2. What hostname did you deploy your app to?
+hw04.jimbot.io
+
+3. What's the URL of your git for this assignment?
+https://github.com/yono-oko/cs4550-hw04
+
+4. How much of the functionality did you complete?
+All of it, although the "Prime Factors" input box throws an error on any
+user input. However, the tests we were provided for the factor function
+all pass.
+
+5. Did you successfully deploy? If not, what's broken?
+Yes, rather than the broken "Prime Factors" input.
+
+6. How comfortable do you feel with Elixir now?
+Fairly comfortable - functional programming languages are not really my thing.
+
+7. Which parts of this assignment did you have trouble with, if any?
+Re-learning how to do things in functional programming languages. I had to
+remember how to use linked lists, no mutation, etc.
+
+
+
+And here's a list of tasks for grading comments. Just leave this here:
+ - Task 1
+ - Task 2
+ - Task 3
+ - Task 4
+ - Task 5
+ - Task 6
+ - Task 7
+ - Task 8
